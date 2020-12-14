@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
+    <title>hydrapp</title>
+    <meta name="description" content="aplikacja liczaca wypite szklanki wody" />
     <!-- Title -->
-    <meta property="og:title" content="" />
+    <meta property="og:title" content="hydrapp" />
     <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="aplikacja liczaca wypite szklanki wody" />
     <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
+    <meta property="og:url" content="https://github.com/KarolMazan/hydrapp.git" />
     <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
     <meta
       property="og:image"
@@ -145,9 +145,14 @@
     />
   </head>
   <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+    <main class="app">
+      <h1 class="app__title">Hydrapp</h1>
+      <div class="glass">
+      <span class="glass__counter">0</span>
+        </div>
+      <button class="button__add button__add--js">Dodaj szklanke</button>
+      <button class="button__remove button__remove--js">Usun szklanke</button>
+
+    </main>
   </body>
 </html>
