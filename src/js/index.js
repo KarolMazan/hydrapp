@@ -9,11 +9,15 @@ registerSW();
 console.log('HELLO 🚀')
 
 
-const glassCounter = document.querySelector('.glass__counter--js')
-const buttonAdd = document.querySelector('.button__add--js')
-const buttonRemove = document.querySelector('.button__remove--js')
-const key = new Date().toISOString().slice(0, 10)
+const glassCounter = document.querySelector('.glass__counter--js');
+const buttonAdd = document.querySelector('.button__add--js');
+const buttonRemove = document.querySelector('.button__remove--js');
+const key = new Date().toLocaleString().slice(0, 10);
+
+let currentGlassCounter = 0;
+
 const localStorageValue = localStorage.getItem(key);
+
 
 if (localStorageValue) {
     currentGlassCounter = localStorageValue;
@@ -21,10 +25,11 @@ if (localStorageValue) {
 } else {
     localStorage.setItem(key, 0);
 }
+
+
 glassCounter.innerHTML = currentGlassCounter;
 
 
-let currentGlassCounter = 0;
 
 buttonAdd.addEventListener('click', () => {
     currentGlassCounter++;
